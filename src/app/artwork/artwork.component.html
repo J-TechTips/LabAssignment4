@@ -1,86 +1,6 @@
 <div id="about-container">
     <div id="about-container-inner">
-        <div class="nav-container">
-            <nav class="top-nav">
-                <span class="welcome-txt">Welcom to Art Store, Login or Create new account</span>
-                <ul class="top-nav-items">
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-camera"></i>
-                            My Account
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-camera"></i>
-                            Wish List
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-camera"></i>
-                            Shopping Cart
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-camera"></i>
-                            Checkout
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="search-container">
-                <nav class="navbar navbar-light bg-light white">
-                    <div class="container-fluid">
-                        <a class="navbar-brand cursive logo-text">ArtStore</a>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
-            </nav>
-            <nav class="main-nav">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="../index.html">Home <span
-                                            class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../about/about.html">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../art-works/art-works.html">Art Works</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../artist/artist.html">Artist</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Special
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Special 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Special 2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </nav>
-        </div>
+        <app-header></app-header>
         <div class="art-content">
             <div class="art-c1">
                 <h1 cla>Self-portrait in a Straw Hat</h1>
@@ -144,42 +64,7 @@
                 <br><br>
                 <h1>Similar Products</h1>
                 <div class="similar-products">
-                    <div class="bordered">
-                        <img src="../img/thumbs/116010.jpg" alt="img1">
-                        <p class="small-text">Artis Holding a Thistle</p>
-                        <div class="btn-group">
-                            <button class="btn btn-primary btn-border"><i class="fas fa-camera"></i> View</button>
-                            <button class="btn btn-success btn-border"><i class="fas fa-camera"></i> Wish</button>
-                            <button class="btn btn-info btn-border"><i class="fas fa-camera"></i> Cart</button>
-                        </div>
-                    </div>
-                    <div class="bordered">
-                        <img src="../img/thumbs/120010.jpg" alt="img1">
-                        <p class="small-text">Artis Holding a Thistle</p>
-                        <div class="btn-group">
-                            <button class="btn btn-primary btn-border"><i class="fas fa-camera"></i> View</button>
-                            <button class="btn btn-success btn-border"><i class="fas fa-camera"></i> Wish</button>
-                            <button class="btn btn-info btn-border"><i class="fas fa-camera"></i> Cart</button>
-                        </div>
-                    </div>
-                    <div class="bordered">
-                        <img src="../img/thumbs/107010.jpg" alt="img1">
-                        <p class="small-text">Artis Holding a Thistle</p>
-                        <div class="btn-group">
-                            <button class="btn btn-primary btn-border"><i class="fas fa-camera"></i> View</button>
-                            <button class="btn btn-success btn-border"><i class="fas fa-camera"></i> Wish</button>
-                            <button class="btn btn-info btn-border"><i class="fas fa-camera"></i> Cart</button>
-                        </div>
-                    </div>
-                    <div class="bordered">
-                        <img src="../img/thumbs/106020.jpg" alt="img1">
-                        <p class="small-text">Artis Holding a Thistle</p>
-                        <div class="btn-group">
-                            <button class="btn btn-primary btn-border"><i class="fas fa-camera"></i> View</button>
-                            <button class="btn btn-success btn-border"><i class="fas fa-camera"></i> Wish</button>
-                            <button class="btn btn-info btn-border"><i class="fas fa-camera"></i> Cart</button>
-                        </div>
-                    </div>
+                    <app-similar-product-card *ngFor="let item of similarProducts" [cardItem]="item"></app-similar-product-card>
                 </div>
             </div>
             <div class="art-c2">
@@ -187,11 +72,11 @@
                     <h3 class="block-header light-blue">Cart</h3>
                     <ul class="sidebar-list">
                         <li>
-                            <img class="pull-left" src="../img/tiny/116010.jpg" alt="sm1">
+                            <img class="pull-left" src="../../assets/img/tiny/116010.jpg" alt="sm1">
                             <a class="tiny-txt align-text-left" href="#">Artist Holding a Thistle</a>
                         </li>
                         <li>
-                            <img class="pull-left" src="../img/tiny/113010.jpg" alt="sm1">
+                            <img class="pull-left" src="../../assets/img/tiny/113010.jpg" alt="sm1">
                             <a class="tiny-txt align-text-left" href="#">Self-portrait in a Straw Hat</a>
                         </li>
                     </ul>

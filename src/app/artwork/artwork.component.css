@@ -134,7 +134,7 @@ h3.block-header-accent {
 }
 .sidebar-list {
     list-style-type: none;
-    ext-align: center;
+    text-align: center;
     padding: .5em;
 }
 .sidebar-list > li {

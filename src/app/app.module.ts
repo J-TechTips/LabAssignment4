@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { routerModule } from './routes';
+import { SharedComponentsModule } from './shared-components/shared-components.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { routerModule } from './routes';
   ],
   imports: [
     BrowserModule,
-    routerModule
+    routerModule,
+    SharedComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
